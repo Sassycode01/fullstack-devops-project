@@ -12,7 +12,7 @@ pipeline {
         stage('Backend Install') {
             steps {
                 dir('backend') {
-                    bat 'npm install'
+                    sh 'npm install'
                 }
             }
         }
@@ -26,7 +26,7 @@ pipeline {
         stage('Docker Build') {
             steps {
                 dir('backend') {
-                    bat 'docker build -t fullstack-backend:1.0 .'
+                    sh 'docker build -t fullstack-backend:1.0 .'
                 }
             }
         }
