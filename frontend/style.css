@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Main heading */
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #6b7280;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* Check Backend button */
+
+#checkBackend {
+    display: block;
+    margin: 0 auto 30px auto;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#checkBackend:hover {
+    background: #1d4ed8;
+}
+
+/* Backend result */
+
+#result {
+    margin-bottom: 35px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Horizontal line */
+
+hr {
+    border: none;
+    border-top: 1px solid #d1d5db;
+    margin: 30px 0;
+}
+
+/* Task Manager heading */
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* Task title and description inputs */
+
+#taskTitle,
+#taskDescription {
+    display: block;
+    width: 600px;
+    max-width: 90%;
+    margin: 0 auto 15px auto;
+    padding: 14px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background: white;
+}
+
+#taskTitle:focus,
+#taskDescription:focus {
+    border-color: #2563eb;
+}
+
+/* Add Task button */
+
+#addTask {
+    display: block;
+    margin: 0 auto 35px auto;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#addTask:hover {
+    background: #1d4ed8;
+}
+
+/* Tasks heading */
+
+h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Task list */
+
+#taskList {
+    list-style-position: inside;
+    width: 700px;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Individual task */
+
+#taskList li {
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    #taskTitle,
+    #taskDescription {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #taskList {
+        width: 100%;
+        max-width: 100%;
+    }
+}
