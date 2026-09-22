@@ -19,12 +19,23 @@ pipeline {
                 }
             }
         }
-
         stage('SonarQube Analysis') {
             steps {
-                echo 'SonarQube analysis will run here'
+                 withSonarQubeEnv('SonarQube') {
+                    sh '''
+                      sonar-scanner \
+                     -Dsonar.projectKey=fullstack-devops-project \
+                     -Dsonar.sources=backend,frontend \
+                     -Dsonar.exclusions=*/node_modules/*
+                     '''
+                 }
+        
             }
         }
+                  
+  
+
+        
 
         stage('Docker Build') {
             steps {
