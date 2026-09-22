@@ -25,8 +25,7 @@ pipeline {
                     def scannerHome = tool 'SonarScanner'
                 
                  withSonarQubeEnv('SonarQube') {
-                    sh '''
-                      sonar-scanner \
+                    sh "${scannerHome}/bin/sonar-scanner \
                      -Dsonar.projectKey=fullstack-devops-project \
                      -Dsonar.sources=backend,frontend \
                      -Dsonar.exclusions=*/node_modules/*
